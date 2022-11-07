@@ -10,6 +10,12 @@ import javafx.scene.shape.Box;
 import javafx.scene.transform.Rotate;
 import javafx.scene.transform.Transform;
 
+/**
+ * This application acts as a controller for the main scene of the application
+ * and allows the app to be interactive.
+ * @author Tudor-Nicolae Cotoc
+ *
+ */
 public class AppController {
 	// instead of  length, width, height
 	// JavaFX uses width,  depth, height
@@ -28,11 +34,15 @@ public class AppController {
 	// unit of length in pixels
 	final static int LENGTH_UNIT = 100;
 	
+	/**
+	 * This function is executed whenever the "Compute" button is pressed.
+	 */
 	public void compute() {
 		double w;
 		double d;
 		double h;
 		int l;
+		// input validation
 		try {
 			w = Double.parseDouble(width.getText());
 			if (w <= 0) {
@@ -85,12 +95,19 @@ public class AppController {
 			return;
 		}
 		
-		System.out.println(w + " " + d + " " + h + " " + l);
 		errorMessage.setVisible(false);
 		setCuboid(w, d, h);
 		setResults(w, d, h, l);
 	}
 
+	/**
+	 * This function will compute the floor area, volume and paint needed according to user input,
+	 * then display the results in the results box.
+	 * @param w - width (length)
+	 * @param d - depth (width)
+	 * @param h - height
+	 * @param l - layers of paint
+	 */
 	private void setResults(double w, double d, double h, int l) {
 		Room room = new Room(w, d, h);
 		DecimalFormat df = new DecimalFormat();
@@ -101,6 +118,12 @@ public class AppController {
 		resultsBox.setVisible(true);
 	}
 
+	/**
+	 * This function will resize the cuboid shape based on user input.
+	 * @param w - width (length)
+	 * @param d - depth (depth)
+	 * @param h - height
+	 */
 	private void setCuboid(double w, double d, double h) {
 		// rotate cuboid
 		Transform t = new Rotate();
@@ -118,8 +141,6 @@ public class AppController {
 			d /= 2;
 			h /= 2;
 		}
-		
-		System.out.println(w + " " + d + " " + h);
 		
 		cuboid.setWidth(LENGTH_UNIT * w);
 		cuboid.setHeight(LENGTH_UNIT * h);

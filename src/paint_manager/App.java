@@ -6,6 +6,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * This represents the entry point for the JavaFX application.
+ * @author Tudor-Nicolae Cotoc
+ *
+ */
 public class App extends Application {
 
 	@Override
