@@ -43,7 +43,7 @@ public class PaintManagerTest {
 	@Test
 	public void testInvalidGetPaint3() {
 		Exception e = assertThrows(IllegalArgumentException.class, () -> {
-			double paint = PaintManager.getPaintNeeded(null, -1);
+			paint = PaintManager.getPaintNeeded(null, -1);
 		});
 		
 		assertEquals("Null object", e.getMessage());
