@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Box?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paint_manager.AppController">
    <children>
       <SplitPane dividerPositions="0.29797979797979796" layoutY="-2.0" prefHeight="576.0" prefWidth="1024.0">
         <items>
@@ -42,8 +42,8 @@
                               <TextField fx:id="layers" prefHeight="25.0" prefWidth="219.0" />
                            </children>
                         </VBox>
-                        <Button mnemonicParsing="false" text="Compute" textAlignment="CENTER" />
-                        <Label fx:id="errorMessage" text="Error" textFill="RED" visible="false" />
+                        <Button mnemonicParsing="false" onAction="#compute" text="Compute" textAlignment="CENTER" />
+                        <Label fx:id="errorMessage" prefHeight="85.0" prefWidth="219.0" text="Error" textFill="RED" visible="false" />
                      </children>
                      <padding>
                         <Insets bottom="20.0" top="20.0" />
@@ -64,7 +64,7 @@
                   </AnchorPane>
                   <AnchorPane layoutY="428.0" prefHeight="146.0" prefWidth="714.0">
                      <children>
-                        <VBox fx:id="resultsBox" alignment="CENTER" layoutX="206.0" prefHeight="146.0" prefWidth="302.0" spacing="20.0" visible="false">
+                        <VBox fx:id="resultsBox" alignment="CENTER" layoutX="-2.0" prefHeight="146.0" prefWidth="714.0" spacing="20.0" visible="false">
                            <children>
                               <Label fx:id="floorArea" text="Floor area:" />
                               <Label fx:id="volume" text="Volume:" />
