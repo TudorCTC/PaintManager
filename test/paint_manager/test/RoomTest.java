@@ -7,6 +7,7 @@ import org.junit.Test;
 import paint_manager.Room;
 
 public class RoomTest {
+	// dimensions of the test room
 	private double length;
 	private double width;
 	private double height;
