@@ -1,8 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Box?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" layoutY="-2.0" prefHeight="576.0" prefWidth="1024.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="42.0" layoutY="-1.0" prefHeight="576.0" prefWidth="219.0" spacing="20.0">
+                     <children>
+                        <Label prefHeight="92.0" prefWidth="219.0" text="Welcome to Paint Manager!&#10;&#10;To get started, insert the dimensions of the room in the boxes below." textAlignment="CENTER" wrapText="true" />
+                        <VBox prefHeight="35.0" prefWidth="219.0">
+                           <children>
+                              <Label text="Length:" />
+                              <TextField fx:id="width" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="35.0" prefWidth="219.0">
+                           <children>
+                              <Label text="Width:" />
+                              <TextField fx:id="depth" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="35.0" prefWidth="219.0">
+                           <children>
+                              <Label text="Height:" />
+                              <TextField fx:id="height" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="63.0" prefWidth="219.0">
+                           <children>
+                              <Label prefHeight="52.0" prefWidth="219.0" text="How many layers of paint would you like?" wrapText="true" />
+                              <TextField fx:id="layers" prefHeight="25.0" prefWidth="219.0" />
+                           </children>
+                        </VBox>
+                        <Button mnemonicParsing="false" text="Compute" textAlignment="CENTER" />
+                        <Label fx:id="errorMessage" text="Error" textFill="RED" visible="false" />
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <AnchorPane layoutY="1.0" prefHeight="427.0" prefWidth="714.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="427.0" prefWidth="714.0">
+                           <children>
+                              <Box fx:id="cuboid" depth="100" height="100" visible="false" width="100" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="428.0" prefHeight="146.0" prefWidth="714.0">
+                     <children>
+                        <VBox fx:id="resultsBox" alignment="CENTER" layoutX="206.0" prefHeight="146.0" prefWidth="302.0" spacing="20.0" visible="false">
+                           <children>
+                              <Label fx:id="floorArea" text="Floor area:" />
+                              <Label fx:id="volume" text="Volume:" />
+                              <Label fx:id="paintNeeded" text="Paint needed:" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
 </AnchorPane>
-
