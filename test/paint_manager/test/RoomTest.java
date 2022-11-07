@@ -22,7 +22,7 @@ public class RoomTest {
 			testRoom = new Room(0.0, 0.0, 0.0);
 		});
 		
-		assertEquals("Arguments less than or equals to zero", exception.getMessage());
+		assertEquals("Arguments less than or equal to zero", exception.getMessage());
 	}
 	
 	@Test
@@ -31,7 +31,7 @@ public class RoomTest {
 			testRoom = new Room(-1.0, -1.0, -1.0);
 		});
 		
-		assertEquals("Arguments less than or equals to zero", exception.getMessage());
+		assertEquals("Arguments less than or equal to zero", exception.getMessage());
 	}
 	
 	@Test
@@ -40,7 +40,7 @@ public class RoomTest {
 			testRoom = new Room(13.0, 5.0, 0.0);
 		});
 		
-		assertEquals("Arguments less than or equals to zero", exception.getMessage());
+		assertEquals("Arguments less than or equal to zero", exception.getMessage());
 	}
 	
 	@Test
@@ -49,7 +49,7 @@ public class RoomTest {
 			testRoom = new Room(13.0, 0.0, 5.0);
 		});
 		
-		assertEquals("Arguments less than or equals to zero", exception.getMessage());
+		assertEquals("Arguments less than or equal to zero", exception.getMessage());
 	}
 	
 	@Test
@@ -58,7 +58,7 @@ public class RoomTest {
 			testRoom = new Room(0.0, 5.0, 12.0);
 		});
 		
-		assertEquals("Arguments less than or equals to zero", exception.getMessage());
+		assertEquals("Arguments less than or equal to zero", exception.getMessage());
 	}
 	
 	@Test
@@ -67,7 +67,7 @@ public class RoomTest {
 			testRoom = new Room(17.0, 3.0, -1.0);
 		});
 		
-		assertEquals("Arguments less than or equals to zero", exception.getMessage());
+		assertEquals("Arguments less than or equal to zero", exception.getMessage());
 	}
 	
 	@Test
@@ -76,7 +76,7 @@ public class RoomTest {
 			testRoom = new Room(17.0, -1.0, 3.0);
 		});
 		
-		assertEquals("Arguments less than or equals to zero", exception.getMessage());
+		assertEquals("Arguments less than or equal to zero", exception.getMessage());
 	}
 	
 	@Test
@@ -85,7 +85,7 @@ public class RoomTest {
 			testRoom = new Room(-1.0, 17.0, 3.0);
 		});
 		
-		assertEquals("Arguments less than or equals to zero", exception.getMessage());
+		assertEquals("Arguments less than or equal to zero", exception.getMessage());
 	}
 	
 	/**
