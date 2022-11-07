@@ -8,7 +8,7 @@ public class Room {
 	
 	public Room(double length, double width, double height) throws IllegalArgumentException{
 		if (length <= 0 || width <= 0 || height <= 0) {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("Arguments less than or equal to zero");
 		}
 		
 		this.length = length;
