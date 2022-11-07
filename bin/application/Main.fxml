@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Box?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paint_manager.AppController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AppController">
    <children>
       <SplitPane dividerPositions="0.29797979797979796" layoutY="-2.0" prefHeight="576.0" prefWidth="1024.0">
         <items>
@@ -43,7 +43,7 @@
                            </children>
                         </VBox>
                         <Button mnemonicParsing="false" onAction="#compute" text="Compute" textAlignment="CENTER" />
-                        <Label fx:id="errorMessage" prefHeight="85.0" prefWidth="219.0" text="Error" textAlignment="CENTER" textFill="RED" visible="false" wrapText="true" />
+                        <Label fx:id="errorMessage" prefHeight="85.0" prefWidth="219.0" textFill="RED" visible="false" />
                      </children>
                      <padding>
                         <Insets bottom="20.0" top="20.0" />

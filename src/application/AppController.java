@@ -1,4 +1,4 @@
-package paint_manager;
+package application;
 
 import java.text.DecimalFormat;
 
@@ -9,6 +9,8 @@ import javafx.scene.layout.VBox;
 import javafx.scene.shape.Box;
 import javafx.scene.transform.Rotate;
 import javafx.scene.transform.Transform;
+import paint_manager.PaintManager;
+import paint_manager.Room;
 
 /**
  * This application acts as a controller for the main scene of the application
@@ -46,7 +48,7 @@ public class AppController {
 		try {
 			w = Double.parseDouble(width.getText());
 			if (w <= 0) {
-				errorMessage.setText("Length must be a positive number!");
+				errorMessage.setText("Length must be a positive!");
 				errorMessage.setVisible(true);
 				return;
 			}
@@ -59,7 +61,7 @@ public class AppController {
 		try {
 			d = Double.parseDouble(depth.getText());
 			if (d <= 0) {
-				errorMessage.setText("Width must be a positive number!");
+				errorMessage.setText("Width must be a positive!");
 				errorMessage.setVisible(true);
 				return;
 			}
@@ -72,7 +74,7 @@ public class AppController {
 		try {
 			h = Double.parseDouble(height.getText());
 			if (h <= 0) {
-				errorMessage.setText("Height must be a positive number!");
+				errorMessage.setText("Height must be a positive!");
 				errorMessage.setVisible(true);
 				return;
 			}
@@ -85,12 +87,12 @@ public class AppController {
 		try {
 			l = Integer.parseInt(layers.getText());
 			if (l <= 0) {
-				errorMessage.setText("Number of layers must be positive!");
+				errorMessage.setText("Nr. of layers must be positive!");
 				errorMessage.setVisible(true);
 				return;
 			}
 		} catch (Exception e) {
-			errorMessage.setText("Number of layers must be a number!");
+			errorMessage.setText("Nr. of layers must be a number!");
 			errorMessage.setVisible(true);
 			return;
 		}
