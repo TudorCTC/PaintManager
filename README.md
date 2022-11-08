@@ -26,7 +26,7 @@ When starting this project, I made a few assumptions:
 
 ## Design
 
-After establishing the assumptions, I had to come up with a way to structure the project. Even though the problem specification was pretty straightforward, such that all of the logic could have been bundled in one PaintManager class, I thought it made more sense, both from a logical as well as an OOP perspective, to have to classes, PaintManager and Room.
+After establishing the assumptions, I had to come up with a way to structure the project. Even though the problem specification was pretty straightforward, such that all of the logic could have been bundled in one PaintManager class, I thought it made more sense, both from a logical as well as an OOP perspective, to have two classes, PaintManager and Room.
 
 By separating the logic like this, the Room objects can maintain the rooms' dimensions and provide information such as floor area or volume, while the PaintManager will only be concerned with logic exclusive to the painting process.
 
