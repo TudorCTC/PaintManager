@@ -32,7 +32,7 @@ By separating the logic like this, the Room objects can maintain the rooms' dime
 
 ## Testing
 
-I made use of the *TDD* paradigm while creatng this project and, as such, I started by writing tests for the PaintManager and Room classes. Even though the project was straightforward, I made sure the tests for as extensive as possible, especially when it comes to input validation.
+I made use of the *TDD* paradigm while creatng this project and, as such, I started by writing tests for the PaintManager and Room classes. Even though the project was straightforward, I made sure the tests were as extensive as possible, especially when it comes to input validation.
 
 ## Programming
 
@@ -44,19 +44,19 @@ What took longer was creating the CLI program and the GUI, such that both of the
 
 In order to deploy the CLI it was enough to export the project as a JAR with the CLI program as the main entry point.
 
-Deploying the GUI app was more difficult because of the project depending on external JavaFX libraries. I ran into some issues with IDE specific tools for exporting JavaFX projects, but after numerous attempts to package the app cleanly, I figured that making the app run on other computers is the most important aspect. Therefore, I just added a copy of the JavaFX 15 SDK to the repository and wrote a script to eecute the full command required to run the app. While I believe this is not the cleanest method, it was the one that allowed me to ensure the project can be run on other machines.
+Deploying the GUI app was more difficult because of the project depending on external JavaFX libraries. I ran into some issues with IDE specific tools for exporting JavaFX projects, but after numerous attempts to package the app cleanly, I figured that making the app run on other computers is the most important aspect. Therefore, I just added a copy of the JavaFX 15 SDK to the repository and wrote a script to execute the full command required to run the app. While I believe this is not the cleanest method, it was the one that allowed me to ensure the project can be run on other machines.
 
 Total time taken: 3 hours and 30 minutes for everything up until deployment.
 
 ## Documentation
 
-I also wrote documentation for almost all the classes and their methods and left comments wherever I considered they were necessary. I admit that some of the methods are quite simple and explanatory just by their method signature, but I think that documentation never hurts.
+I also wrote documentation for almost all the classes and their methods and left comments wherever I considered they were necessary. I admit that some of the methods are quite simple and self-explanatory just by their method signature, but I think that documentation never hurts.
 
 # Possible improvements
 
 If I had more time to work on the project, there are a few improvements that could be made:
   
-  * Add extra functionality to the PaintManager and Room classes: ability to select a color when painting, support for different shaped rooms.
+  * Add extra functionality to the PaintManager and Room classes: ability to select a color when painting, support for different shaped rooms and windows, doors etc.
   * Refine and improve the GUI: for example, if we were to implement a paint color, it would be interesting if the color shade got more and more intense the more layers of paint are added.
   * Further testing - not just unit testing, but ensuring the project works on multiple platforms etc.
   * Finding a better packaging solution for the GUI. 
